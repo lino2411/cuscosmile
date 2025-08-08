@@ -2165,7 +2165,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 320px) and (max-width: 480px) {
     body {
         font-size: 0.9rem;
-        background: violet;
     }
 
     .section h1 {
@@ -2179,7 +2178,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 2rem;
         font-size: 1.2rem;
         text-align: center;
-        border: 2px solid red;
     }
 
     /* Ajustes generales */
@@ -2581,7 +2579,6 @@ h1, h2, h3, h4, h5, h6 {
     body {
         font-size: 16px;
         padding: 0;
-        background-color: lightgreen; /* Ejemplo de color de fondo */
     }
     .section h1 {
         font-size: 2.5rem;
@@ -2955,7 +2952,8 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* Estilos para labletas,  laptops */
     body {
-        background-color: lightblue; /* Ejemplo de color de fondo */
+        font-size: 1rem;
+        padding: 0;
     }
     
     /*header*/
@@ -3119,7 +3117,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     /* Estilos para computadoras de escritorio */
     body {
-        background-color: lightcoral; /* Ejemplo de color de fondo */
+        /* background-color: lightcoral;  */
     }
 }
 
@@ -3127,14 +3125,14 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1280px) and (max-width: 1439px) {
     /* Estilos para pantallas extra-grandes */
     body {
-        background-color: purple; /* Ejemplo de color de fondo */
+        /* background-color: purple;  */
     }
 }
 
 /* Pantallas grandes: 1440px en adelante */
 @media (min-width: 1440px) {
     body {
-        background-color: yellow; /* Ejemplo de color de fondo */
+        /* background-color: yellow; */
     }
 }
 
