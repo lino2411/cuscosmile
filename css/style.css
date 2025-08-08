@@ -2163,9 +2163,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Dispositivos móviles: 320px–480px */
 /* =================== MÓVILES 320px–480px =================== */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    body {
-        font-size: 0.9rem;
-    }
 
     .section h1 {
         font-size: 1.5rem;
@@ -2176,7 +2173,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 90%;
         margin: 0 auto;
         margin-bottom: 2rem;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
@@ -2256,8 +2253,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     .nav-links .btn-citas {
         width: 100%;
+        display: block;
+        margin-left: 0;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     /* Hero section */
@@ -2292,6 +2291,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero-text p {
     font-size: 1rem;
     margin-bottom: 1.2rem;
+    line-height: 1.5;
   }
 
   .hero-buttons {
