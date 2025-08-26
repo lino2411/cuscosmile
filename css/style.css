@@ -759,7 +759,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 2px 5px 10px var(--Blanco-Neutro);
-    
 }
 
 .about-hero-content p {
@@ -3161,6 +3160,7 @@ h1, h2, h3, h4, h5, h6 {
         left: 0;
         bottom: 0;
         margin: auto;
+        padding: 2rem 1.5rem;
         width: 95%;
         height: 88%;
         display: flex;
@@ -3175,11 +3175,12 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-text {
         margin-bottom: 2rem;
+        padding: 0;
     }
 
-    .hero-text h1, span {
+    .hero-text h1, .hero-text h1 span {
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 700;;
     }
 
     .hero-text p {
@@ -3205,6 +3206,24 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* -- Features Section -- */
+    .features-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        gap: 1rem;
+    }
+
+    /* -- Services Preview -- */
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        gap: 1rem;
+    }
+
+    /* -- Stats Section -- */
     .stats-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -3246,6 +3265,15 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(60%);
     }
 
+    /* -- Contact Info -- */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        padding: 0;
+    }
+
+
     /* ---------------------about.html -----------------*/
     .about-hero-content {
         padding: 1rem;
@@ -3256,12 +3284,20 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .about-hero-content h1, span {
-        font-size: 2.5rem;
+    .about-hero-content h1, .about-hero-content span {
+        font-size: 2rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     /* -- About Section -- */
     .about-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
         padding: 1rem 0;
     }
 
@@ -3271,17 +3307,39 @@ h1, h2, h3, h4, h5, h6 {
         display: block;
     }
 
+    /* -- Mission and values Section -- */
+    .values-grid {
+        padding: 0;
+    }
+
     /* -- Team Section -- */
     .team-grid {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
         gap: 4rem;
-        justify-content: center;
-        align-items: center;
+    }
+
+
+    .team-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
     }
 
     .team-img img {
+        width: 100%;
+        height:250px;
+        object-fit: cover;
         border-radius: 50%;
+        z-index: 2;
+    }
+
+    /* .-- History Section -- */
+    .history-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
     }
 
     /* -- CTA Section -- */
@@ -3301,9 +3359,20 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .services-hero-content h1, span {
-        font-size: 2.5rem;
+    .services-hero-content h1, .services-hero-content span {
+        font-size: 2rem;
         font-weight: 700;
+    }
+
+    .services-hero-content p {
+        font-size: 1rem;
+    }
+
+    /* -- Services Section -- */
+    .services-filter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
     }
 
     /* -- Before and After Section -- */
@@ -3338,9 +3407,21 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .testimonios-hero-content h1, span {
-        font-size: 2.5rem;
+    .testimonios-hero-content h1, .testimonios-hero-content span {
+        font-size: 2rem;
         font-weight: 700;
+    }
+
+    .testimonios-hero-content p {
+        font-size: 1rem;
+    }
+
+    /* -- Testimonios Section -- */
+    .testimonios-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 0;
     }
 
     /* -- Satisfaction Stats Section -- */
@@ -3374,9 +3455,21 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .blog-hero-content h1, span {
-        font-size: 2.5rem;
+    .blog-hero-content h1, .blog-hero-content span {
+        font-size: 2rem;
         font-weight: 700;
+    }
+
+    .blog-hero-content p {
+        font-size: 1rem;
+    }
+
+    /* -- Blog Articles Section -- */
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 0;
     }
 
     /*-------------------- galeria.html -----------------*/
@@ -3391,9 +3484,29 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .bgalerialog-hero-content h1, span {
-        font-size: 2.5rem;
+    .galeria-hero-content h1, .galeria-hero-content span {
+        font-size: 2rem;
         font-weight: 700;
+    }
+
+    .galeria-hero-content p{
+        font-size: 1rem;
+    }
+
+    /* -- Galería Section -- */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 0;
+    }
+
+    /* -- section antes y despues -- */
+    .gallery-grid-before-after {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 0;
     }
 
     /*-------------------- contact.html -----------------*/
@@ -3408,9 +3521,13 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .contact-hero-content h1, span {
-        font-size: 2.5rem;
+    .contact-hero-content h1, .contact-hero-content span {
+        font-size: 2rem;
         font-weight: 700;
+    }
+
+    .contact-hero-content p {
+        font-size: 1rem;
     }
 
     /* -- section  contact form -- */
@@ -3468,9 +3585,13 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid var(--Azul-Claro-Brillante);
     }
 
-    .citas-hero-content h1, span {
-        font-size: 2.5rem;
+    .citas-hero-content h1, .citas-hero-content span {
+        font-size: 2rem;
         font-weight: 700;
+    }
+
+    .citas-hero-content p {
+        font-size: 1rem;
     }
 
     /* -- Footer -- */
