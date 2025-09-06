@@ -19,7 +19,8 @@
     <header>
         <nav class="navbar">
             <a href="#" class="logo">
-                <img src="asset/img/logo_smile1.png" alt="Logo Cusco Smile" class="logo-img">
+                <!-- <img src="asset/img/logo_smile1.png" alt="Logo Cusco Smile" class="logo-img"> -->
+                <img src="asset/img/logo2.png" alt="Logo Cusco Smile" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
@@ -63,55 +64,59 @@
                         </li>
                         <li>
                             <i  class="fa-solid fa-phone contact-icon"></i>
-                            <span>Celulares: <a href="tel:+51999999999">+51 999 999 999</a> / <a href="tel:+51999999999">+51 999 999 999</a></span>
+                            <span>Celulares: <a href="tel:+51984773182">984 773 182</a> / <a href="tel:+51949135490">949 135 490</a></span>
                         </li>
                         <li>
                             <i class="fa-solid fa-map-marker-alt contact-icon"></i>
                             <span>Dirección: <a href="https://www.google.com/maps/place/CUSCO+SMILE/@-13.5327019,-71.9695456,21z/data=!4m6!3m5!1s0x916dd51a643790ef:0x559bdebec4d3ef87!8m2!3d-13.5326905!4d-71.969384!16s%2Fg%2F11tgbznfrm?entry=ttu"
-                                target="_blank" class="btn-map">Urb. Bancopata Calle Ollanta H-2, Cusco - Perú</a></span>
+                                target="_blank" class="btn-map">Calle Ollanta H-2, Urb. Bancopata, Cusco - Perú</a></span>
                         </li>
                         <li>
                             <i class="fa-solid fa-clock contact-icon"></i>
-                            <span>Horario: Lunes a Viernes: 9:00 AM - 7:00 PM</span>
+                            <span>Horario: Lunes a Viernes: 9:00 AM - 8:00 PM</span>
                         </li>
                     </ul>
                     <!-- nuestras redes -->
                     <div class="redes">
                         <h3>Síguenos en:</h3>
                         <div class="social-link">
-                            <a href="#" target="_blank"><i class="icon-social fab fa-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="icon-social fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="icon-social fab fa-tiktok"></i></a>
-                            <a href="#" target="_blank"><i class="icon-social fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/CuscoSmile" target="_blank"><i class="icon-social fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/cusco_smile?igsh=cDVubjY1eW1oMjQy" target="_blank"><i class="icon-social fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@cusco.smile?_t=ZS-8zC4Q9rMImj&_r=1" target="_blank"><i class="icon-social fab fa-tiktok"></i></a>
+                            <a href="https://wa.me/51984773182?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Cusco%20Smile." target="_blank" class="icon-social fab fa-whatsapp"></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- formulario de contacto -->
-                <form action="" method="POST" class="form">
-                    <h2>Envíanos un mensaje</h2>
-                    <div class="form-container" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Célular</label>
-                            <input type="tel" id="phone" name="phone" required  placeholder="Tu célular">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="Tu email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
-                        </div>
+                <div class="section quick-contact-section">
+                    <h2>Contáctanos para Más Información</h2>
+                    <div class="container">
+                        <form id="whatsapp-form" class="contact-form" data-aos="fade-up">
+                            <input type="text" name="name" placeholder="Nombre completo" required>
+                            <input type="number" name="edad" placeholder="Su edad" required>
+                            <input type="number" name="phone" placeholder="Celular" required>
+                            <select name="cliente" required>
+                                <option value="" disabled selected>Selecciona un cliente</option>
+                                <option value="cliente-nuevo">Cliente Nuevo</option>
+                                <option value="cliente-recurrente">Cliente Recurrente</option>
+                            </select>
+                            <select name="service" required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="odontologia-general">Odontología General</option>
+                                <option value="consulta-adontologica">Consulta Odontologica</option>
+                                <option value="estetica-dental">Estética Dental</option>
+                                <option value="implantes">Implantes Dentales</option>
+                                <option value="ortodoncia">Ortodoncia</option>
+                                <option value="endodoncia">Endodoncia</option>
+                                <option value="periodoncia">Periodoncia</option>
+                                <option value="cirugia-oral">Cirugía Oral</option>
+                            </select>
+                            <textarea name="message" placeholder="Tu mensaje o consulta" rows="4"></textarea>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
                     </div>
-                    <div class="">
-                        <button type="submit" class="btn-form-enviar">Enviar mensaje</button>
-                    </div>
-                </form> 
+                </div>
             </div>
         </section>
 

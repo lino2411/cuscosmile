@@ -23,7 +23,8 @@
     <header>
         <nav class="navbar">
             <a href="#" class="logo">
-                <img src="asset/img/logo_smile1.png" alt="Logo Cusco Smile" class="logo-img">
+                <!-- <img src="asset/img/logo_smile1.png" alt="Logo Cusco Smile" class="logo-img"> -->
+                <img src="asset/img/logo2.png" alt="Logo Cusco Smile" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
@@ -94,7 +95,7 @@
                             <h3>Estética Dental</h3>
                             <p>Mejora la apariencia de tu sonrisa con tratamientos estéticos personalizados que resaltan tu confianza.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Blanqueamiento dental con tecnología láser</li>
+                                <li><i class="fas fa-check"></i> Blanqueamiento dental con férulas cómodo y sin dolor</li>
                                 <li><i class="fas fa-check"></i> Carillas de porcelana de alta durabilidad</li>
                                 <li><i class="fas fa-check"></i> Diseño de sonrisa digital</li>
                                 <li><i class="fas fa-check"></i> Corrección de imperfecciones dentales</li>
@@ -120,23 +121,6 @@
                         </div>
                     </div>
 
-                    <div class="service-card" data-category="preventivo">
-                        <div class="service-icon">
-                            <i class="fas fa-child"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Odontopediatría</h3>
-                            <p>Cuidado dental especializado para niños, creando experiencias positivas en un ambiente cómodo y amigable.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Prevención y selladores dentales</li>
-                                <li><i class="fas fa-check"></i> Tratamientos sin dolor para niños</li>
-                                <li><i class="fas fa-check"></i> Educación sobre higiene bucoral</li>
-                                <li><i class="fas fa-check"></i> Ortodoncia preventiva</li>
-                            </ul>
-                            <a href="citas.html" class="btn btn-secondary">Más información</a>
-                        </div>
-                    </div>
-
                     <div class="service-card" data-category="estetico">
                         <div class="service-icon">
                             <i class="fas fa-procedures"></i>
@@ -146,7 +130,6 @@
                             <p>Corrige la alineación de tus dientes con tratamientos modernos para una sonrisa funcional y estética.</p>
                             <ul class="service-features">
                                 <li><i class="fas fa-check"></i> Brackets metálicos y estéticos</li>
-                                <li><i class="fas fa-check"></i> Ortodoncia invisible con alineadores</li>
                                 <li><i class="fas fa-check"></i> Tratamientos para todas las edades</li>
                                 <li><i class="fas fa-check"></i> Planes personalizados</li>
                             </ul>
@@ -162,7 +145,7 @@
                             <h3>Endodoncia</h3>
                             <p>Salva tus dientes con tratamientos de conductos radiculares realizados con precisión y sin dolor.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Microscopía dental avanzada</li>
+                                <li><i class="fas fa-check"></i> <b>Endomotor rotatorio:</b> mayor precisión y comodidad durante el tratamiento</li>
                                 <li><i class="fas fa-check"></i> Tratamiento de conductos en una sola sesión</li>
                                 <li><i class="fas fa-check"></i> Técnicas mínimamente invasivas</li>
                                 <li><i class="fas fa-check"></i> Restauración post-tratamiento</li>
@@ -198,7 +181,6 @@
                             <ul class="service-features">
                                 <li><i class="fas fa-check"></i> Extracción de muelas del juicio</li>
                                 <li><i class="fas fa-check"></i> Cirugías reconstructivas</li>
-                                <li><i class="fas fa-check"></i> Biopsias orales</li>
                                 <li><i class="fas fa-check"></i> Anestesia segura y cómoda</li>
                             </ul>
                             <a href="citas.html" class="btn btn-secondary">Más información</a>
@@ -290,15 +272,6 @@
                             <p>Con un cuidado adecuado, los implantes dentales pueden durar toda la vida. Es importante mantener una buena higiene bucal y acudir a revisiones periódicas para asegurar su longevidad.</p>
                         </div>
                     </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                        <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-answer-6">
-                            <h3>¿Aceptan seguros dentales?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer" id="faq-answer-6">
-                            <p>Sí, trabajamos con varias compañías de seguros dentales. Te recomendamos consultar con nuestro personal para verificar si tu seguro está dentro de nuestra red y qué tratamientos cubre.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -324,14 +297,19 @@
             <div class="container">
                 <form id="whatsapp-form" class="contact-form" data-aos="fade-up">
                     <input type="text" name="name" placeholder="Nombre completo" required>
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="tel" name="phone" placeholder="Teléfono" required>
+                    <input type="number" name="edad" placeholder="Su edad" required>
+                    <input type="number" name="phone" placeholder="Celular" required>
+                    <select name="cliente" required>
+                        <option value="" disabled selected>Selecciona un cliente</option>
+                        <option value="cliente-nuevo">Cliente Nuevo</option>
+                        <option value="cliente-recurrente">Cliente Recurrente</option>
+                    </select>
                     <select name="service" required>
                         <option value="" disabled selected>Selecciona un servicio</option>
                         <option value="odontologia-general">Odontología General</option>
+                        <option value="consulta-adontologica">Consulta Odontologica</option>
                         <option value="estetica-dental">Estética Dental</option>
                         <option value="implantes">Implantes Dentales</option>
-                        <option value="odontopediatria">Odontopediatría</option>
                         <option value="ortodoncia">Ortodoncia</option>
                         <option value="endodoncia">Endodoncia</option>
                         <option value="periodoncia">Periodoncia</option>

@@ -19,7 +19,8 @@
     <header>
         <nav class="navbar">
             <a href="#" class="logo">
-                <img src="asset/img/logo_smile1.png" alt="Logo Cusco Smile" class="logo-img">
+                <!-- <img src="asset/img/logo_smile1.png" alt="Logo Cusco Smile" class="logo-img"> -->
+                <img src="asset/img/logo2.png" alt="Logo Cusco Smile" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
@@ -55,28 +56,32 @@
         <section class="section citas-form-section" id="citas-form">
             <h2>Reserva tu Cita</h2>
             <div class="container">
-                <form action="submit_cita.php" method="POST" class="contact-form" data-aos="fade-up">
+                <form id="whatsapp-form" class="contact-form" data-aos="fade-up">
                     <input type="text" name="name" placeholder="Nombre completo" required>
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="tel" name="phone" placeholder="Teléfono" required>
+                    <input type="number" name="edad" placeholder="Su edad" required>
+                    <input type="number" name="phone" placeholder="Celular" required>
+                    <select name="cliente" required>
+                        <option value="" disabled selected>Selecciona un cliente</option>
+                        <option value="cliente-nuevo">Cliente Nuevo</option>
+                        <option value="cliente-recurrente">Cliente Recurrente</option>
+                    </select>
                     <select name="service" required>
                         <option value="" disabled selected>Selecciona un servicio</option>
                         <option value="odontologia-general">Odontología General</option>
+                        <option value="consulta-adontologica">Consulta Odontologica</option>
                         <option value="estetica-dental">Estética Dental</option>
                         <option value="implantes">Implantes Dentales</option>
-                        <option value="odontopediatria">Odontopediatría</option>
                         <option value="ortodoncia">Ortodoncia</option>
                         <option value="endodoncia">Endodoncia</option>
                         <option value="periodoncia">Periodoncia</option>
                         <option value="cirugia-oral">Cirugía Oral</option>
                     </select>
-                    <input type="date" name="date" required>
-                    <input type="time" name="time" required>
+                    <textarea name="message" placeholder="Tu mensaje o consulta" rows="4"></textarea>
                     <label>
                         <input type="checkbox" name="consent" required>
                         Acepto que mis datos sean enviados a WhatsApp para confirmar la cita.
                     </label>
-                    <button type="submit" class="btn btn-primary">Reservar Cita</button>
+                    <button type="submit" class="btn btn-primary">Recervar Cita</button>
                 </form>
             </div>
         </section>
