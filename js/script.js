@@ -149,8 +149,8 @@ if (!form) {
     const servicioTexto = servicioNombre[service] || service;
     const servicioMensaje = message || "Estoy interesado en este servicio, por favor envíenme más detalles.";
 
-    const rawMessage = `Hola, soy *${name}* (edad: ${edad} años) 👋
-${emoji} Soy ${cliente.replace('-', ' ')} y quiero información sobre *${servicioTexto}*.
+    const rawMessage = `Hola 👋, soy *${name}* (edad: ${edad} años)
+${emoji} Soy *${cliente.replace('-', ' ')}* y quiero información sobre *${servicioTexto}*.
 📞 Cel: ${phone}
 📝 Mensaje: ${servicioMensaje}`;
 
