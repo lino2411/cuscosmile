@@ -154,7 +154,7 @@ ${emoji} Soy *${cliente.replace('-', ' ')}* y quiero información sobre *${servi
 📞 Cel: ${phone}
 📝 Mensaje: ${servicioMensaje}`;
 
-    const whatsappNumber = "51927291508";
+    const whatsappNumber = "51984773182"; //reemplazar con el número real del destinatario
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(rawMessage)}`;
 
     if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
