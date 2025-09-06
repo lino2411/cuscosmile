@@ -102,33 +102,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //---------formulario de contacto por WhatsApp
-  const form = document.getElementById("whatsapp-form");
+  //---------formulario de contacto por WhatsApp
+const form = document.getElementById("whatsapp-form");
 
-  if (!form) {
-    console.warn("Formulario no encontrado");
-    return;
-  }
-
+if (!form) {
+  console.warn("Formulario no encontrado");
+} else {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = form.querySelector("input[name='name']").value.trim();
-    const email = form.querySelector("input[name='email']").value.trim();
+    const edad = form.querySelector("input[name='edad']").value.trim();
     const phone = form.querySelector("input[name='phone']").value.trim();
+    const cliente = form.querySelector("select[name='cliente']").value;
     const service = form.querySelector("select[name='service']").value;
     const message = form.querySelector("textarea[name='message']").value.trim();
 
-    if (!name || !email || !phone || !service) {
+    if (!name || !edad || !phone || !cliente || !service) {
       alert("Por favor, completa todos los campos obligatorios.");
       return;
     }
 
-    // Texto plano con emojis reales (no usar emojis mal copiados del sistema)
     const servicioEmoji = {
       "odontologia-general": "🦷",
+      "consulta-adontologica": "📋",
       "estetica-dental": "😄",
       "implantes": "🛠️",
-      "odontopediatria": "🧒",
       "ortodoncia": "🦷🪥",
       "endodoncia": "💉",
       "periodoncia": "🪥",
@@ -137,9 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const servicioNombre = {
       "odontologia-general": "Odontología General",
+      "consulta-adontologica": "Consulta Odontológica",
       "estetica-dental": "Estética Dental",
       "implantes": "Implantes Dentales",
-      "odontopediatria": "Odontopediatría",
       "ortodoncia": "Ortodoncia",
       "endodoncia": "Endodoncia",
       "periodoncia": "Periodoncia",
@@ -148,21 +147,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const emoji = servicioEmoji[service] || "📋";
     const servicioTexto = servicioNombre[service] || service;
-
     const servicioMensaje = message || "Estoy interesado en este servicio, por favor envíenme más detalles.";
 
-    // Mensaje final con saltos de línea reales
-    const rawMessage = `Hola, soy *${name}* 👋
-
-${emoji} Quisiera información sobre *${servicioTexto}*.
-📞 Tel: ${phone}
-📧 Email: ${email}
+    const rawMessage = `Hola, soy *${name}* (edad: ${edad} años) 👋
+${emoji} Soy ${cliente.replace('-', ' ')} y quiero información sobre *${servicioTexto}*.
+📞 Cel: ${phone}
 📝 Mensaje: ${servicioMensaje}`;
 
     const whatsappNumber = "51927291508";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(rawMessage)}`;
 
-    // Abrir en móvil o escritorio
     if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
       window.location.href = whatsappURL;
     } else {
@@ -171,7 +165,7 @@ ${emoji} Quisiera información sobre *${servicioTexto}*.
 
     form.reset();
   });
-  
+}
 
   // --------------------- Modal para imágenes de la galería
 
